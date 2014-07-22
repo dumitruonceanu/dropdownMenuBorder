@@ -1,0 +1,236 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+body {
+  background: #333;
+  font-family: 'Lato', source-regular, Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+body nav {
+  background-color: #000;
+  text-align: center;
+}
+body nav .navBar {
+  /*general navbar styling*/
+  display: inline-block;
+  padding-top: 10px;
+}
+body nav .navBar li {
+  /*setting the navbar to inline, and position relative so that the .subnav can be positioned abolutely wtih respect to its parent li. */
+  display: inline;
+  position: relative;
+  float: left;
+}
+body nav .navBar li a {
+  /*general styling of the links in the main navbar*/
+  float: left;
+  position: relative;
+  text-decoration: none;
+  color: #999;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #000;
+  font-size: 15px;
+  z-index: 11;
+}
+body nav .navBar li:hover ul {
+  /*this is where the magic happens for the subnav. on li:hover, target the ul and display: block to the subnav*/
+  display: block;
+}
+body nav .navBar li:hover > a {
+  /*navbar list on hover, target the <a> and give it a blue color. Remains colored while navigating subnav as well*/
+  color: #26c1d9;
+}
+body nav .navBar .loc a {
+  /*this is where you give the li with a class of .loc a border and make it invisible to the user by coloring it the same as the backdrop. */
+  border: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+body nav .navBar .loc:hover > a {
+  /*target specifically the navbar li with the class of .loc (the one with the subnav), and give the li a border color of white (border previously set to black above), remove the bottom border and set its background color to black. */
+  border-color: #fff;
+  border-bottom: none;
+  background-color: #000;
+}
+
+.subNav {
+  /*general subnav styling*/
+  color: white;
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 38px;
+  right: 0px;
+  border: 1px solid #ccc;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  width: 150%;
+  background-color: #000;
+  z-index: 10;
+}
