@@ -39,7 +39,6 @@ body{
 					padding-left: 20px;
 					padding-right: 20px;
 					padding-bottom: 20px;
-					border-top: 1px solid #000;
 					font-size: 15px;
 					z-index: 11;
 				}
@@ -56,8 +55,6 @@ body{
 				a{
 					/*this is where you give the li with a class of .loc a border and make it invisible to the user by coloring it the same as the backdrop. */
 					border: 1px solid #000;
-					border-bottom: 1px solid #000;
-
 				}
 				&:hover > a{
 					/*target specifically the navbar li with the class of .loc (the one with the subnav), and give the li a border color of white (border previously set to black above), remove the bottom border and set its background color to black. */
@@ -73,13 +70,13 @@ body{
 
 .subNav{
 	/*general subnav styling*/
-	color: white;
+	color: #fff;
 	display: none;
 	position: absolute;
 	text-align: center;
 	top: 38px;
 	right: 0px;
-	border: 1px solid #ccc;
+	border: 1px solid #fff;
 	padding-bottom: 20px;
 	padding-left: 10px;
 	width: 150%;
